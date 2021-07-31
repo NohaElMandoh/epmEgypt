@@ -32,7 +32,7 @@
                                 <div class="itemsss">
                                     <div class="itemssstop">
                                         <div class="images">
-                                            <img src="{{Voyager::image($project->image)}}">
+                                            <a href="{{route('project',$project->id)}}">    <img src="{{Voyager::image($project->image)}}"></a>
                                         </div>
                                         <a href="#" class="overlay">
                                             <span class="imgegall">
@@ -41,7 +41,7 @@
                                         </a>
                                     </div>
                                     <div class="itemsssbootom">
-                                        <a href="#">{{$project->title}}</a>
+                                        <a href="{{route('project',$project->id)}}">{{$project->title}}</a>
                                         <p>{{$project->address}}</p>
                                     </div>
                                 </div>
