@@ -36,7 +36,7 @@
                                         </div>
                                         <a href="#" class="overlay">
                                             <span class="imgegall">
-                                                <i class="far fa-images"></i> 10
+                                                <i class="far fa-images"></i> {{count($project->images)}}
                                             </span>
                                         </a>
                                     </div>
