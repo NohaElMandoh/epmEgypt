@@ -10,13 +10,13 @@
                         <div class="ContactAgen">
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                    <a href="AgentPage" class="img">
+                                    <a href="{{route('agent',$project->agent->id)}}" class="img">
                                         <img src="{{Voyager::image($project->agent->image)}}">
                                     </a>
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                                     <div class="details">
-                                        <a href="AgentPage" class="azzlink">{{$project->agent->title}}</a>
+                                        <a href="{{route('agent',$project->agent->id)}}" class="azzlink">{{$project->agent->title}}</a>
                                         <p>{{$project->agent->mobile}}</p>
                                         <p>{{$project->agent->email}}</p>
                                     </div>
@@ -61,7 +61,7 @@
                                                 <div class="images">
                                                     <img src="{{Voyager::image($project->image)}}">
                                                 </div>
-                                                <a href="#" class="overlay">
+                                                <a href="{{route('project',$project->id)}}" class="overlay">
                                                     <span class="imgegall">
                                                         <i class="far fa-images"></i>  {{count($project->images)}}
                                                     </span>
@@ -110,7 +110,7 @@
                                         <div class="row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                 <div class="images">
-                                                    <img src="{{Voyager::image($last->image)}}">
+                                                    <a href="{{route('project',$last->id)}}">     <img src="{{Voyager::image($last->image)}}"></a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 col-sm-8 col-md-8 col-xs-8">

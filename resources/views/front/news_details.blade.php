@@ -168,11 +168,11 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="RightSideItem">
                                     <div class="title">
-                                        <h3>Leave a Reply</h3>
+                                        <h3>{{__('home.Leave a Reply')}}</h3>
                                     </div>
                                     <div class="RightSideCondetnt">
                                         <div class="ReplayForm">
-                                            <p>Your email address will not be published. Required fields are marked *</p>
+                                            <p>{{__('home.not be published')}}</p>
                                             <div class="formonp">
                                                 <form  method="post" action='{{route('saveComment')}}' id='saveComment'>
                                                     @csrf
@@ -202,7 +202,7 @@
                                                             <div class="form-group">
                                                                 <div class="checkOption">
                                                                     <div class="bg">
-                                                                        <div class="chiller_cb"> <label for="myCheckbox1">Save my name, email, and website in this browser for the next time I comment </label> <input id="myCheckbox1" class="myCheckbox1" type="checkbox"> <span></span></div>
+                                                                        <div class="chiller_cb"> <label for="myCheckbox1">{{__('home.Save')}}</label> <input id="myCheckbox1" class="myCheckbox1" type="checkbox"> <span></span></div>
                                                                     </div>
 
 
@@ -211,7 +211,7 @@
                                                         </div>
                                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                             <div class="fomr-group">
-                                                                <button type="submit" >Submit</button>
+                                                                <button type="submit" >{{__('home.submit')}}</button>
                                                             </div>
                                                         </div>
                                                     </div>

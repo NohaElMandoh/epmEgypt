@@ -65,12 +65,12 @@
                     <ul class="nav nav-tabs">
                         <li class="active">
                             <a href="#tab1default" data-toggle="tab">
-                                <i class="far fa-images" aria-hidden="true"></i> <span>{{__('home.Gallery')}}</span>
+                                <i class="far fa-images" aria-hidden="true"></i> <span>{{ __('home.Gallery') }}</span>
                             </a>
                         </li>
                         <li>
                             <a href="#tab2default" data-toggle="tab">
-                                <i class="icon-map"></i> <span>{{__('home.Map')}}</span>
+                                <i class="icon-map"></i> <span>{{ __('home.Map') }}</span>
                             </a>
                         </li>
                     </ul>
@@ -82,12 +82,13 @@
                             <div class="sliderrproduct">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
-                                        @if($project->images)
-                                        @foreach($project->images as $image)
-                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                                            <img src="{{Voyager::image($image->image)}}">
-                                        </li>
-                                        @endforeach
+                                        @if ($project->images)
+                                            @foreach ($project->images as $image)
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="0"
+                                                    class="active">
+                                                    <img src="{{ Voyager::image($image->image) }}">
+                                                </li>
+                                            @endforeach
                                         @endif
                                         {{-- <li data-target="#carouselExampleIndicators" data-slide-to="1">
                                             <img src="images/EPM_IMG/proj1.jpg">
@@ -103,16 +104,17 @@
                                                     alt="First slide">
                                             </div>
                                         </div> --}}
-                                        @if($project->images)
-                                        @foreach($project->images as $image)
-                                         <div class="carousel-item  @if ($loop->first) active   @endif">
-                                            <div class="imgess">
-                                                <img class="d-block w-100" src="{{Voyager::image($image->image)}}" alt="First slide">
-                                            </div>
-                                        </div>
-                                        @endforeach
+                                        @if ($project->images)
+                                            @foreach ($project->images as $image)
+                                                <div class="carousel-item  @if ($loop->first) active @endif">
+                                                    <div class="imgess">
+                                                        <img class="d-block w-100" src="{{ Voyager::image($image->image) }}"
+                                                            alt="First slide">
+                                                    </div>
+                                                </div>
+                                            @endforeach
                                         @endif
-                                       {{-- <div class="carousel-item">
+                                        {{-- <div class="carousel-item">
                                             <div class="imgess">
                                                 <img class="d-block w-100" src="images/EPM_IMG/proj2.jpg" alt="First slide">
                                             </div>
@@ -121,12 +123,12 @@
                                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                                         data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">{{__('home.Previous')}}</span>
+                                        <span class="sr-only">{{ __('home.Previous') }}</span>
                                     </a>
                                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
                                         data-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">{{__('home.Next')}}</span>
+                                        <span class="sr-only">{{ __('home.Next') }}</span>
                                     </a>
                                 </div>
                             </div>
@@ -136,9 +138,8 @@
                         <div class="tab-pane fade" id="tab2default">
 
                             <div class="iframMap">
-                                <iframe style="border: 0;"
-                                    src="{{$project->map_url}}"
-                                    width="100%" allowfullscreen="allowfullscreen"></iframe>
+                                <iframe style="border: 0;" src="{{ $project->map_url }}" width="100%"
+                                    allowfullscreen="allowfullscreen"></iframe>
                             </div>
                         </div>
                     </div>
@@ -163,48 +164,60 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="LeftSideItem">
                                         <div class="Title">
-                                            <h3>{{__('home.Description')}}</h3>
+                                            <h3>{{ __('home.Description') }}</h3>
                                         </div>
                                         <div class="Contetleft">
                                             <div class="Descrip">
-                                                <p class="titpp">{{__('home.Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                                                    dolor auctor.')}}</p>
+                                                <p class="titpp">
+                                                    {{ __('home.Vivamus sagittis lacus vel augue laoreet rutrum faucibusdolor auctor.') }}
+                                                </p>
                                                 <div class="DescripProp">
-                                                    <h2>{{__('home.Property Detail')}}</h2>
+                                                    <h2>{{ __('home.Property Detail') }}</h2>
                                                     <div class="DescripPropCont">
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Bedrooms')}} : </span>{{$project->bedrooms}}</p>
+                                                                <p><span class="key">{{ __('home.Bedrooms') }} :
+                                                                    </span>{{ $project->bedrooms }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Orienten')}} : </span> {{$project->orienten}}</p>
+                                                                <p><span class="key">{{ __('home.Orienten') }} : </span>
+                                                                    {{ $project->orienten }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Bathrooms')}} : </span> {{$project->bathrooms}}</p>
+                                                                <p><span class="key">{{ __('home.Bathrooms') }} : </span>
+                                                                    {{ $project->bathrooms }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Type')}} : </span> {{$project->type}}</p>
+                                                                <p><span class="key">{{ __('home.Type') }} : </span>
+                                                                    {{ $project->type }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Livingrooms')}} : </span> {{$project->livingrooms}}</p>
+                                                                <p><span class="key">{{ __('home.Livingrooms') }} : </span>
+                                                                    {{ $project->livingrooms }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Garages')}} : </span>{{$project->garages}}</p>
+                                                                <p><span class="key">{{ __('home.Garages') }} :
+                                                                    </span>{{ $project->garages }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Rooms')}} : </span>{{$project->rooms}}</p>
+                                                                <p><span class="key">{{ __('home.Rooms') }} :
+                                                                    </span>{{ $project->rooms }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Area')}} : </span> {{$project->area}}</p>
+                                                                <p><span class="key">{{ __('home.Area') }} : </span>
+                                                                    {{ $project->area }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Plot size')}} : </span> {{$project->plot_size}}</p>
+                                                                <p><span class="key">{{ __('home.Plot size') }} : </span>
+                                                                    {{ $project->plot_size }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Kitchens')}} : </span> {{$project->kitchens}}</p>
+                                                                <p><span class="key">{{ __('home.Kitchens') }} : </span>
+                                                                    {{ $project->kitchens }}</p>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                <p><span class="key">{{__('home.Year Built')}} : </span> {{$project->built_year}}</p>
+                                                                <p><span class="key">{{ __('home.Year Built') }} : </span>
+                                                                    {{ $project->built_year }}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -217,32 +230,32 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="LeftSideItem">
                                         <div class="Title">
-                                            <h3>{{__('home.Amenities')}}</h3>
-                                        
+                                            <h3>{{ __('home.Amenities') }}</h3>
+
                                         </div>
                                         <div class="Contetleft">
                                             <div class="Amenities">
                                                 <div class="row">
-                                                    @if(count($project->amenities)>0)
-                                                    @foreach($project->amenities as $amenit)
-                                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                        <div class="AmenitiesItem">
-                                                            <p>
-                                                                <span class="icon">
-                                                                    <i class="far fa-check-square"></i>
-                                                                </span> {{$amenit->title}}
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    @endforeach
+                                                    @if (count($project->amenities) > 0)
+                                                        @foreach ($project->amenities as $amenit)
+                                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="AmenitiesItem">
+                                                                    <p>
+                                                                        <span class="icon">
+                                                                            <i class="far fa-check-square"></i>
+                                                                        </span> {{ $amenit->title }}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
                                                     @else
-                                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                        <div class="AmenitiesItem">
-                                                            <p>
-                                                    N/A
-                                                            </p>
+                                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                            <div class="AmenitiesItem">
+                                                                <p>
+                                                                    N/A
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                    </div>
                                                     @endif
                                                 </div>
                                             </div>
@@ -253,7 +266,7 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="LeftSideItem">
                                         <div class="Title">
-                                            <h3>{{__('home.Floor Plans')}}</h3>
+                                            <h3>{{ __('home.Floor Plans') }}</h3>
                                         </div>
                                         <div class="Contetleft">
                                             <div class="Floor">
@@ -264,54 +277,60 @@
                                                             <div class="vc_column-inner-nile ">
                                                                 <div class="wpb_wrapper">
                                                                     <div class="accordion-1 nile-accordion">
-@if($project->plans)
-@foreach($project->plans as $plan)
-                                                                        <div class="card">
-                                                                            <div class="card-header" id="heading_41422">
-                                                                                <h5 class="mt-0">
-                                                                                    <a class=" no_active collapsed parent"
-                                                                                        data-toggle="collapse"
-                                                                                        data-target="#collapse_41422"
-                                                                                        aria-expanded="false"
-                                                                                        aria-controls="collapse_41422">
-                                                                                        <div class="row">
-                                                                                            <div
-                                                                                                class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                                                                                <div class="leftss">
-                                                                                                    <p>{{$plan->title}}</p>
+                                                                        @if ($project->plans)
+                                                                            @foreach ($project->plans as $plan)
+                                                                                <div class="card">
+                                                                                    <div class="card-header"
+                                                                                        id="heading_41422">
+                                                                                        <h5 class="mt-0">
+                                                                                            <a class=" no_active collapsed parent"
+                                                                                                data-toggle="collapse"
+                                                                                                data-target="#collapse_41422"
+                                                                                                aria-expanded="false"
+                                                                                                aria-controls="collapse_41422">
+                                                                                                <div class="row">
+                                                                                                    <div
+                                                                                                        class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                                                        <div class="leftss">
+                                                                                                            <p>{{ $plan->title }}
+                                                                                                            </p>
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                                                        <div class="Right">
+                                                                                                            <ul>
+                                                                                                                <li><span>{{ $plan->sqft }}</span>
+                                                                                                                    {{ __('home.sqft') }}
+                                                                                                                </li>
+                                                                                                                <li><span>{{ $plan->baths }}</span>
+                                                                                                                    {{ __('home.Baths') }}
+                                                                                                                </li>
+                                                                                                                <li><span>{{ $plan->beds }}</span>
+                                                                                                                    {{ __('home.Beds') }}
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+
+                                                                                                    </div>
                                                                                                 </div>
 
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                                                                                                <div class="Right">
-                                                                                                    <ul>
-                                                                                                        <li><span>{{$plan->sqft}}</span>
-                                                                                                            {{__('home.sqft')}}</li>
-                                                                                                        <li><span>{{$plan->baths}}</span>
-                                                                                                            {{__('home.Baths')}}</li>
-                                                                                                        <li><span>{{$plan->beds}}</span>
-                                                                                                            {{__('home.Beds')}}</li>
-                                                                                                    </ul>
-                                                                                                </div>
+                                                                                            </a>
+                                                                                        </h5>
+                                                                                    </div>
+                                                                                    <div id="collapse_41422"
+                                                                                        class="collapse"
+                                                                                        aria-labelledby="heading_41422"
+                                                                                        data-parent=".accordion-1" style="">
+                                                                                        <div class="card-body">
+                                                                                            <h2>{{ $plan->title }}</h2>
+                                                                                            <p> {{ $plan->desc }}</p>
 
-                                                                                            </div>
                                                                                         </div>
-
-                                                                                    </a>
-                                                                                </h5>
-                                                                            </div>
-                                                                            <div id="collapse_41422" class="collapse"
-                                                                                aria-labelledby="heading_41422"
-                                                                                data-parent=".accordion-1" style="">
-                                                                                <div class="card-body">
-                                                                                    <h2>{{$plan->title}}</h2>
-                                                                                    <p> {{$plan->desc}}</p>
-
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        @endforeach
+                                                                            @endforeach
                                                                         @endif
                                                                         {{-- <div class="card">
                                                                             <div class="card-header" id="heading_2">
@@ -430,13 +449,12 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="LeftSideItem">
                                         <div class="Title">
-                                            <h3>{{__('home.Video')}}</h3>
+                                            <h3>{{ __('home.Video') }}</h3>
                                         </div>
                                         <div class="Contetleft">
                                             <div class="Vediosss">
                                                 <iframe title="Property Tour: 400 Park Avenue South, 29B" width="100%"
-                                                    src="{{$project->video_url}}"
-                                                    frameborder="0"
+                                                    src="{{ $project->video_url }}" frameborder="0"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     allowfullscreen></iframe>
                                             </div>
@@ -447,16 +465,15 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="LeftSideItem">
                                         <div class="Title">
-                                            <h3>{{__('home.3D Gallery')}}</h3>
+                                            <h3>{{ __('home.3D Gallery') }}</h3>
                                         </div>
-                                        @if($project->video_d_url)
-                                        <div class="Contetleft">
-                                            <div class="Vediosss">
-                                                <iframe
-                                                    src="{{$project->video_d_url}}"
-                                                    width="100%" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                                        @if ($project->video_d_url)
+                                            <div class="Contetleft">
+                                                <div class="Vediosss">
+                                                    <iframe src="{{ $project->video_d_url }}" width="100%" frameborder="0"
+                                                        allowfullscreen="allowfullscreen"></iframe>
+                                                </div>
                                             </div>
-                                        </div>
                                         @endif
                                     </div>
                                 </div>
@@ -466,7 +483,7 @@
                     </div>
 
 
-             @include('front.partials.contactAgent')
+                    @include('front.partials.contactAgent')
                 </div>
             </div>
         </div>
@@ -475,4 +492,17 @@
 
 
 
+@endsection
+@section('script')
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 @endsection

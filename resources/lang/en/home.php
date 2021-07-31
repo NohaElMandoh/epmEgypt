@@ -91,7 +91,9 @@ return [
     'on'=>'on',
     'Latest post'=>'Latest post',
     'Blog categories'=>'Blog categories',
-    'Archives'=>'Archives'
+    'Archives'=>'Archives',
+    'Categories'=>'Categories',
+    'Leave a Reply'=>'Leave a Reply'
 
 
 
