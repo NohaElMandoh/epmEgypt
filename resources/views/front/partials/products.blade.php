@@ -17,7 +17,7 @@
                                 <div class="item-img">
                                     <div class="item-img-info">
                                         <a class="product-image" title="Product Title Here"
-                                            href=" single_product.html "> <img alt="Product Title Here "
+                                            href=" {{route('project',$project->id)}} "> <img alt="Product Title Here "
                                                 src="{{Voyager::image($project->image)}}"> </a>
 
                                     </div>
@@ -25,7 +25,7 @@
                                 <div class="item-info">
                                     <div class="info-inner">
                                         <div class="item-title">
-                                            <a title="Product Title Here" href="#"> {{$project->title}} </a>
+                                            <a title="Product Title Here" href="{{route('project',$project->id)}}"> {{$project->title}} </a>
                                             <p>{{$project->address}}</p>
                                         </div>
                                     </div>
