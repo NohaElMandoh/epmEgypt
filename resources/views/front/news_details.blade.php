@@ -325,7 +325,7 @@
                                                             <div class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
                                                                 <div class="details">
                                                                     <a href="{{route('news_details',$new->id)}}" class="NAME">{{$new->title}}</a>
-                                                                    <p><span class="dattsasa">{{ $comment->created_at->format('M') }}&nbsp {{ $comment->created_at->format('d') }} &nbsp,{{ $comment->created_at->format('Y') }}
+                                                                    <p><span class="dattsasa">{{ $new->created_at->format('M') }}&nbsp {{ $new->created_at->format('d') }} &nbsp,{{ $new->created_at->format('Y') }}
                                                                          —</span><a href="#" class="coments">{{$new->comments->count()}} {{__('home.Comments')}}</a></p>
                                                                 </div>
                                                             </div>
