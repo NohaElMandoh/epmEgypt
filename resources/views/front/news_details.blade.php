@@ -33,11 +33,11 @@
                                     <div class="RightSideCondetnt">
                                         <div class="Giftssss">
                                             <a href="#" class="Uncatego">Uncategorized</a>
-                                            <h1 class="entry_title">The Gifts We Want to Give in 2018</h1>
+                                            <h1 class="entry_title">{{$news->title}}</h1>
                                             <div class="liss">
                                                 <ul>
                                                     <li>
-                                                        <p><span class="icon"><i class="icon-calender"></i></span><a href="#">May 21, 2020</a></p>
+                                                        <p><span class="icon"><i class="icon-calender"></i></span><a href="#">{{ $news->created_at->format('M') }}&nbsp {{ $news->created_at->format('d') }}&nbsp,{{ $news->created_at->format('Y') }}</a></p>
                                                     </li>
                                                     <li>
                                                         <p><span class="icon"><i class="icon-user"></i></span>BY<a href="#">epm</a></p>
@@ -235,7 +235,7 @@
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tapItem">
                                     <div class="titleTap">
-                                        <h2>Archives</h2>
+                                        <h2>{{__('home.Archives')}}</h2>
                                     </div>
                                     <div class="tapContent">
                                         <div class="blogs">
@@ -243,7 +243,8 @@
                                                 <li>
                                                     <span><i class="far fa-folder-open"></i></span>
                                                     
-                                                    <a href="#">May 2020</a>
+                                                    <a href="{{route('news',['search_month'=>$news->created_at->format('M'),'search_year'=>$news->created_at->format('Y')])}}">
+                                                        {{ $news->created_at->format('M') }} &nbsp {{ $news->created_at->format('Y') }}</a>
                                                 </li>
                                                 
                                             </ul>
@@ -255,7 +256,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tapItem">
                                     <div class="titleTap">
-                                        <h2>Categories</h2>
+                                        <h2>{{__('home.Categories')}}</h2>
                                     </div>
                                     <div class="tapContent">
                                         <div class="blogs">
@@ -263,7 +264,8 @@
                                                 <li>
                                                     <span><i class="far fa-folder"></i></span>
                                                     
-                                                    <a href="#">Uncategorized</a>
+                                                   
+                                                    <a href="{{route('news',['cat_id'=>$news->category->id])}}">{{$news->category->title}}</a>
                                                 </li>
                                                 
                                             </ul>
@@ -306,7 +308,7 @@
                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tapItem">
                                     <div class="titleTap">
-                                        <h2>Latest post</h2>
+                                        <h2>{{__('home.Latest post')}}</h2>
                                     </div>
                                     <div class="tapContent">
                                         <div class="Posts">
@@ -324,7 +326,7 @@
                                                                 <div class="details">
                                                                     <a href="{{route('news_details',$new->id)}}" class="NAME">{{$new->title}}</a>
                                                                     <p><span class="dattsasa">{{ $comment->created_at->format('M') }}&nbsp {{ $comment->created_at->format('d') }} &nbsp,{{ $comment->created_at->format('Y') }}
-                                                                         —</span><a href="#" class="coments">{{$new->comments->count()}} Comments</a></p>
+                                                                         —</span><a href="#" class="coments">{{$new->comments->count()}} {{__('home.Comments')}}</a></p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -342,7 +344,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tapItem">
                                     <div class="titleTap">
-                                        <h2>Blog categories</h2>
+                                        <h2>{{__('home.Blog categories')}}</h2>
                                     </div>
                                     <div class="tapContent">
                                         <div class="blogs">
@@ -350,7 +352,7 @@
                                                 <li>
                                                     <span><i class="far fa-folder"></i></span>
                                                     
-                                                    <a href="#">Uncategorized</a>
+                                                    <a href="{{route('news',['cat_id'=>$new->category->id])}}">{{$new->category->title}}</a>
                                                 </li>
                                                 
                                             </ul>

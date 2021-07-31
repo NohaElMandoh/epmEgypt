@@ -26,7 +26,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="NewsItem">
                                     <div class="images">
-                                        <img src="{{Voyager::image($new->image)}}">
+                                  <a href="{{route('news_details',$new->id)}}">      <img src="{{Voyager::image($new->image)}}"></a>
                                     </div>
                                     <div class="details">
                                         <div class="Date">
@@ -35,10 +35,10 @@
                                             <h3>{{ $new->created_at->format('M') }}</h3>
                                         </div>
                                         <div class="DetalsDesc">
-                                            <a href="#" class="uncate">Uncategorized</a>
-                                            <a href="#" class="titleblog">{{$new->title}}</a>
+                                            <a href="#" class="uncate">{{$new->category->title}}</a>
+                                            <a href="{{route('news_details',$new->id)}}" class="titleblog">{{$new->title}}</a>
                                             <p>{{$new->desc}}</p>
-                                            <a href="#" class="readmore">Read More</a>
+                                            <a href="{{route('news_details',$new->id)}}" class="readmore">{{__('home.Read More')}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tapItem">
                                     <div class="titleTap">
-                                        <h2>Blog categories</h2>
+                                        <h2>{{__('home.Blog categories')}}</h2>
                                     </div>
                                     <div class="tapContent">
                                         <div class="blogs">
@@ -179,7 +179,7 @@
                                                 <li>
                                                     <span><i class="far fa-folder"></i></span>
                                                     
-                                                    <a href="#">Uncategorized</a>
+                                                    <a href="{{route('news',['cat_id'=>$news->category->id])}}">{{$news->category->title}}</a>
                                                 </li>
                                                 
                                             </ul>

@@ -89,7 +89,9 @@ return [
     'Comments'=>'Comments',
     'Recent Comments'=>'Recent Comments',
     'on'=>'on',
-    'Latest post'=>'Latest post'
+    'Latest post'=>'Latest post',
+    'Blog categories'=>'Blog categories',
+    'Archives'=>'Archives'
 
 
 

@@ -66,8 +66,15 @@ class HomeController extends Controller
     }
     public function news(Request $request)
     {
+       
         if ($request->has('name'))
         $news = News::where('title_en', 'like', '%' . $request->name . '%')->orWhere('title_ar', 'like', '%' . $request->name . '%')->get();
+        elseif($request->has('cat_id') )
+        $news = News::where('category_id', $request->cat_id)->get();
+        elseif($request->has('search_month') && $request->has('search_year') )
+        $news = News::whereYear('created_at', '=', $request->search_year)
+        ->whereMonth('created_at', '=',  $request->search_month)
+        ->get();
         else
         $news = News::get();
         $last_news = News::latest()->take(3)->get();

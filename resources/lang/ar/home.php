@@ -90,5 +90,7 @@ return [
     'Comments'=>'تعليقات',
     'Recent Comments'=>'أحدث التعليقات',
     'on'=>'على',
-    'Latest post'=>'أحدث الاخبار'
+    'Latest post'=>'أحدث الاخبار',
+    'Blog categories'=>'التصنيفات',
+    'Archives'=>'الأرشيف'
 ];

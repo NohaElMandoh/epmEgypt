@@ -23,7 +23,7 @@
                                     </div>
                                 </div>
                                 <div class="blogbootom">
-                                    <a href="#" class="uncate">Uncategorized</a>
+                                    <a href="#" class="uncate">{{$new->category->title}}<</a>
                                     <a href="{{route('news_details',$new->id)}}" class="titleblog">{{$new->title}}</a>
                                     <p>{{$new->desc}}</p>
                                     <a href="{{route('news_details',$new->id)}}" class="readmore">{{__('home.Read More')}}</a>
