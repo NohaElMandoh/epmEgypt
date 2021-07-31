@@ -34,7 +34,7 @@
                                         <div class="images">
                                             <a href="{{route('project',$project->id)}}">    <img src="{{Voyager::image($project->image)}}"></a>
                                         </div>
-                                        <a href="#" class="overlay">
+                                        <a href="{{route('project',$project->id)}}" class="overlay">
                                             <span class="imgegall">
                                                 <i class="far fa-images"></i> {{count($project->images)}}
                                             </span>
