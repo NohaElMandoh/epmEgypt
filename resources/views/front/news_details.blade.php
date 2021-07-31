@@ -124,7 +124,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            @if($news->comments->count()>0)
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="RightSideItem">
                                     <div class="title">
@@ -164,7 +164,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            @endif
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="RightSideItem">
                                     <div class="title">
