@@ -96,7 +96,10 @@ return [
     'Share'=>'Share',
     'Print'=>'Print',
     'Email'=>'Email',
-    'Mosaic gallery fringilla velaliquet nec'=>'Mosaic gallery fringilla velaliquet nec'
+    'Mosaic gallery fringilla velaliquet nec'=>'Mosaic gallery fringilla velaliquet nec',
+    'website'=>'website',
+    'Comment'=>'Comment',
+    'BY'=>'BY'
 
 
 

@@ -97,5 +97,8 @@ return [
     'Share'=>'مشاركة',
     'Print'=>'طباعة',
     'Email'=>'البريد',
-    'Mosaic gallery fringilla velaliquet nec'=>'معرض الفسيفساء fringilla velaliquet غير مصنفة في موضعها'
+    'Mosaic gallery fringilla velaliquet nec'=>'معرض الفسيفساء fringilla velaliquet غير مصنفة في موضعها',
+    'website'=>'الموقع الاليكترونى',
+    'Comment'=>' تعليق',
+    'BY'=>'بواسطة'
 ];

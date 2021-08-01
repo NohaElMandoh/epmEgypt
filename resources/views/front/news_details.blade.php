@@ -7,11 +7,11 @@
     <div class="container-fluid">
         <div class="pageHeaderLinks">
             <ul>
-                <li> <a href="index.html" class="linkprvpage">Home</a> </li>
+                <li> <a href="{{route('home')}}" class="linkprvpage">{{__('home.Home')}}</a> </li>
                 <li> <span>/</span> </li>
-                <li> <p>NewsBlogName</p> </li>
+                <li> <p>{{$new->category->title}}</p> </li>
                 <li> <span>/</span> </li>
-                <li> <p>NewsDetails</p> </li>
+                <li> <p>{{$news->title}}</p> </li>
             </ul>
         </div>
     </div>
@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="RightSideCondetnt">
                                         <div class="Giftssss">
-                                            <a href="#" class="Uncatego">Uncategorized</a>
+                                            <a href="#" class="Uncatego">{{$new->category->title}}</a>
                                             <h1 class="entry_title">{{$news->title}}</h1>
                                             <div class="liss">
                                                 <ul>
@@ -40,7 +40,7 @@
                                                         <p><span class="icon"><i class="icon-calender"></i></span><a href="#">{{ $news->created_at->format('M') }}&nbsp {{ $news->created_at->format('d') }}&nbsp,{{ $news->created_at->format('Y') }}</a></p>
                                                     </li>
                                                     <li>
-                                                        <p><span class="icon"><i class="icon-user"></i></span>BY<a href="#">epm</a></p>
+                                                        <p><span class="icon"><i class="icon-user"></i></span>{{__('home.BY')}}<a href="#">epm</a></p>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -184,22 +184,22 @@
                                                     <div class="row">
                                                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                                             <div class="fomr-group">
-                                                                <input type="text" id='name' name='name'class="form-control" placeholder="Name" required>
+                                                                <input type="text" id='name' name='name'class="form-control" placeholder="{{__('home.Your name')}}" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                                             <div class="fomr-group">
-                                                                <input type="email" id='email' name='email' class="form-control" placeholder="email" required>
+                                                                <input type="email" id='email' name='email' class="form-control" placeholder="{{__('home.Your email')}}" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                                             <div class="fomr-group">
-                                                                <input type="text" class="form-control" id='website' name='website' placeholder="website" required>
+                                                                <input type="text" class="form-control" id='website' name='website' placeholder="{{__('home.website')}}" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                             <div class="fomr-group">
-                                                                <textarea class="form-control"  id='comment' name='comment' required placeholder="Comment"></textarea>
+                                                                <textarea class="form-control"  id='comment' name='comment' required placeholder="{{__('home.Comment')}}"></textarea>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
