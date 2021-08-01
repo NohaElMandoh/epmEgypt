@@ -54,7 +54,7 @@ class HomeController extends Controller
     {
         $project = Project::find($id);
         $projects = Project::get();
-        $lastProp = Project::take(3)->get();
+        $lastProp = Project::latest()->get();
         return view('front.single_project', compact('project', 'projects', 'lastProp'));
     }
     public function agent($id)
