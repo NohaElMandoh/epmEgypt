@@ -37,7 +37,7 @@ Route::any('/project/{id}', [App\Http\Controllers\HomeController::class, 'projec
 Route::get('/agent/{id}', [App\Http\Controllers\HomeController::class, 'agent'])->name('agent');
 Route::any('/news_details/{id}', [App\Http\Controllers\HomeController::class, 'news_details'])->name('news_details');
 Route::post('/saveComment', [App\Http\Controllers\HomeController::class, 'saveComment'])->name('saveComment');
-Route::post('/reserveProject', [App\Http\Controllers\HomeController::class, 'reserveProject'])->name('reserveProject');
+Route::post('reserveProject', [App\Http\Controllers\HomeController::class, 'reserveProject'])->name('reserveProject');
 
 
 });
