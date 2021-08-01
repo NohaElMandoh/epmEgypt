@@ -266,7 +266,8 @@
 
 <script type="text/javascript">
 
-$(document).on('click', '.btn_submit', function (e) {
+// $(document).on('click', '.btn_submit', function (e) {
+    $('#reserve_project').on('submit', function(event) {
                event.preventDefault();
 
                let email = $('#email').val();
