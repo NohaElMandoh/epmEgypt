@@ -132,6 +132,50 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="RightSideItem">
+                                            <div class="Title">
+                                                <h3>Latest properties</h3>
+                                            </div>
+                                            <div class="ContentRight">
+                                                <div class="contacctform">
+                                                    <form  method="post">
+                                                        @csrf
+                                                        <div class="alert alert-success alert-success-message" style="display:none">
+                                                            {{ Session::get('success') }}
+                                                        </div>
+                                                        <input type="hidden" id="project_id" name="project_id" value="{{$project->id}}">
+
+                                                        <div class="row">
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="form-group">
+                                                                    <input type="text" id='name' name='name' required
+                                                                    class="form-control" placeholder="{{__('home.Your name')}}">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="form-group">
+                                                                    <input type="email"  id='email' name='email' required class="form-control" placeholder="{{__('home.Your email')}}">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="form-group">
+                                                                    <textarea class="form-control"  id='message' name='message' required placeholder="{{__('home.Your message')}}"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="form-group">
+                                                                    <button type="submit" class="btn btn_submit">{{__('home.submit')}}</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none">
                 <div class="RightSideItem Mortgage">
@@ -217,4 +261,49 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).on('click', '.btn_submit', function (e) {
+               event.preventDefault();
+
+               let email = $('#email').val();
+               let name = $('#name').val();
+               let message = $('#message').val();
+               let project_id = $('#project_id').val();
+              
+
+   
+               $.ajax({
+                   url: "reserveProject",
+                   type: "POST",
+                   data: {
+                       "_token": "{{ csrf_token() }}",
+                      
+                       email: email,
+                       name:name,
+                       message:message,
+                       project_id:project_id
+                 
+                    
+                   },
+                   success: function(response) {
+   
+                       $(".alert-success-message").css("display", "block");
+                       $(".alert-success-message").html('<P style="text-align:center">Thank you.').hide()
+                           .fadeIn(1500, function() {
+                               $('.alert-success-message');
+                           }).fadeOut(1500, function() {
+                               $('.alert-success-message');
+                           }).reset();
+                         
+                   },
+               });
+               document.getElementById("registerCourse").reset();
+           });
+   
+       </script>
+
 @endsection

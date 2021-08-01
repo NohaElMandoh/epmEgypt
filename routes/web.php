@@ -33,9 +33,11 @@ Route::any('/courses', [App\Http\Controllers\HomeController::class, 'courses'])-
 Route::post('/registerCourse', [App\Http\Controllers\HomeController::class, 'registerCourse'])->name('registerCourse');
 Route::get('/contactUs', [App\Http\Controllers\HomeController::class, 'contactUs'])->name('contactUs');
 Route::post('/contactUs', [App\Http\Controllers\HomeController::class, 'contact_Us'])->name('contact_Us');
-Route::get('/project/{id}', [App\Http\Controllers\HomeController::class, 'project'])->name('project');
+Route::any('/project/{id}', [App\Http\Controllers\HomeController::class, 'project'])->name('project');
 Route::get('/agent/{id}', [App\Http\Controllers\HomeController::class, 'agent'])->name('agent');
 Route::any('/news_details/{id}', [App\Http\Controllers\HomeController::class, 'news_details'])->name('news_details');
 Route::post('/saveComment', [App\Http\Controllers\HomeController::class, 'saveComment'])->name('saveComment');
+Route::post('/reserveProject', [App\Http\Controllers\HomeController::class, 'reserveProject'])->name('reserveProject');
+
 
 });

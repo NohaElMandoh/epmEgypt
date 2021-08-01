@@ -9,6 +9,7 @@ use App\Models\Course;
 use App\Models\Facility;
 use App\Models\News;
 use App\Models\Project;
+use App\Models\Reservation;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Testimonial;
@@ -104,7 +105,21 @@ class HomeController extends Controller
         //     return response()->json(['message' => 'Error!']);
         // }
     }
-    
+    public function reserveProject(Request $request)
+    {
+        $input = $request->all();
+
+        $saved = Reservation::create($input);
+        
+        if ($saved) {
+
+            return response()->json(['message' => 'Success!']);
+
+        }else
+        {
+            return response()->json(['message' => 'Error!']);
+        }
+    }
     public function facility()
     {
         $facilities = Facility::get();
