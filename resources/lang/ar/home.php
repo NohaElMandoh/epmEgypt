@@ -100,5 +100,9 @@ return [
     'Mosaic gallery fringilla velaliquet nec'=>'معرض الفسيفساء fringilla velaliquet غير مصنفة في موضعها',
     'website'=>'الموقع الاليكترونى',
     'Comment'=>' تعليق',
-    'BY'=>'بواسطة'
+    'BY'=>'بواسطة',
+    'Log in'=>'دخول',
+    'Entries feed'=>' المداخل',
+    'Comments feed'=>' التعليقات',
+    'WordPress.org'=>'وردبريس'
 ];

@@ -287,19 +287,19 @@
                                             <ul>
                                                 <li>
                                                   
-                                                    <a href="#">Log in</a>
+                                                    <a href="#">{{__('home.Log in')}}</a>
                                                 </li>
                                                 <li>
                                                   
-                                                    <a href="#">Entries feed</a>
+                                                    <a href="#">{{__('home.Entries feed')}}</a>
                                                 </li>
                                                 <li>
                                                   
-                                                    <a href="#">Comments feed</a>
+                                                    <a href="#">{{__('home.Comments feed')}}</a>
                                                 </li>
                                                 <li>
                                                   
-                                                    <a href="#">WordPress.org</a>
+                                                    <a href="#">{{__('home.WordPress.org')}}</a>
                                                 </li>
                                                
                                                 

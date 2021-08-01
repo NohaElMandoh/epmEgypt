@@ -99,7 +99,11 @@ return [
     'Mosaic gallery fringilla velaliquet nec'=>'Mosaic gallery fringilla velaliquet nec',
     'website'=>'website',
     'Comment'=>'Comment',
-    'BY'=>'BY'
+    'BY'=>'BY' ,
+    'Log in'=>'Log in',
+    'Entries feed'=>'Entries feed',
+    'Comments feed'=>'Comments feed',
+    'WordPress.org'=>'WordPress.org'
 
 
 
