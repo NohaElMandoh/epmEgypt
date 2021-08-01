@@ -76,7 +76,7 @@ class HomeController extends Controller
                 ->whereMonth('created_at', '=',  $request->search_month)
                 ->get();
         else
-            $news = News::get();
+            $news = News::latest()->get();
         $last_news = News::latest()->take(3)->get();
         $comments = Comment::latest()->take(5)->get();
         return view('front.news', compact('news', 'last_news', 'comments'));
