@@ -104,9 +104,7 @@ return [
     'Entries feed'=>'Entries feed',
     'Comments feed'=>'Comments feed',
     'WordPress.org'=>'WordPress.org',
-    'Meta'=>'Meta'
-
-
-
+    'Meta'=>'Meta',
+    'Send Message'=>'Send Message'
 
 ];

@@ -105,5 +105,6 @@ return [
     'Entries feed'=>' المداخل',
     'Comments feed'=>' التعليقات',
     'WordPress.org'=>'وردبريس',
-    'Meta'=>'كلمات دلالية'
+    'Meta'=>'كلمات دلالية',
+    'Send Message'=>'ارسل رساله'
 ];
