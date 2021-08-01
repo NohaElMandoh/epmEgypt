@@ -14,7 +14,7 @@
                         <div class="jtv-top-links">
                             <div class="links">
                                 <ul>
-                                    <li> <a href="account_page.html"><span
+                                    <li> <a href="mailto:@if($website) {{$website->email}}@endif"><span
                                                 class="hidden-xs">@if($website) {{$website->email}}@endif</span></a> </li>
                                 </ul>
                             </div>

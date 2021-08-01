@@ -69,7 +69,7 @@
                                                             <div class="images">
                                                                 <img src="{{ Voyager::image($last->image) }}">
                                                             </div>
-                                                            <a href="ProductDetails.html" class="overlay">
+                                                            <a href="{{ route('project', $last->id) }}" class="overlay">
                                                                 <span class="imgegall">
                                                                     <i class="far fa-images" aria-hidden="true"></i>
                                                                     {{ count($last->images) }}

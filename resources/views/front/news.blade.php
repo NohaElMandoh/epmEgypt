@@ -63,8 +63,8 @@
                                                 @csrf
                                             <div class="form-group">
                                                 <span class="icon"><i class="fas fa-search"></i></span>
-                                                <input type="text" id='name' name='name'placeholder="Search" class="form-control">
-                                                <button type="submit" class="btn btn-search">Search</button>
+                                                <input type="text" id='name' name='name'placeholder="{{__('home.Search')}}" class="form-control">
+                                                <button type="submit" class="btn btn-search">{{__('home.Search')}}</button>
                                             </div>
                                             </form>
                                         </div>
@@ -91,8 +91,8 @@
                                                             </div>
                                                             <div class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
                                                                 <div class="details">
-                                                                    <a href="#" class="NAME">{{$news->title}}</a>
-                                                                    <a href="#" class="coments">{{$news->comments->count()}} {{__('home.Comments')}}</a>
+                                                                    <a href="{{route('news_details',$news->id)}}" class="NAME">{{$news->title}}</a>
+                                                                    <a href="{{route('news_details',$news->id)}}" class="coments">{{$news->comments->count()}} {{__('home.Comments')}}</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -121,7 +121,7 @@
                                                 <li>
                                                     <span><i class="far fa-comment"></i></span>
                                                     <p>{{$comment->name}} {{__('home.on')}} 
-                                                    <a href="#">{{$comment->news->title}}</a></p>
+                                                    <a href="{{route('news_details',$comment->news->id)}}" >{{$comment->news->title}}</a></p>
                                                 </li>
                                                 @endforeach
                                              @endif
@@ -146,12 +146,12 @@
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                                 <div class="images">
-                                                                    <img src="{{Voyager::image($news->image)}}">
+                                                                  <a href="{{route('news_details',$news->id)}}" >  <img src="{{Voyager::image($news->image)}}"></a>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
                                                                 <div class="details">
-                                                                    <a href="#" class="NAME">{{$news->title}}</a>
+                                                                    <a href="{{route('news_details',$news->id)}}" class="NAME">{{$news->title}}</a>
                                                                     <p><span class="dattsasa">{{ $news->created_at->format('M') }}&nbsp {{ $news->created_at->format('d') }} &nbsp,{{ $news->created_at->format('Y') }} —</span><a href="#" class="coments">{{$news->comments->count()}} Comments</a></p>
                                                                 </div>
                                                             </div>
