@@ -103,7 +103,8 @@ return [
     'Log in'=>'Log in',
     'Entries feed'=>'Entries feed',
     'Comments feed'=>'Comments feed',
-    'WordPress.org'=>'WordPress.org'
+    'WordPress.org'=>'WordPress.org',
+    'Meta'=>'Meta'
 
 
 

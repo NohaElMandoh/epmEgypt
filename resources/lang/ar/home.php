@@ -104,5 +104,6 @@ return [
     'Log in'=>'دخول',
     'Entries feed'=>' المداخل',
     'Comments feed'=>' التعليقات',
-    'WordPress.org'=>'وردبريس'
+    'WordPress.org'=>'وردبريس',
+    'Meta'=>'كلمات دلالية'
 ];

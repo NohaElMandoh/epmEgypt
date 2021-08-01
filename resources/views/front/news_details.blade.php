@@ -280,7 +280,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tapItem">
                                     <div class="titleTap">
-                                        <h2>Meta</h2>
+                                        <h2>{{__('home.Meta')}}</h2>
                                     </div>
                                     <div class="tapContent">
                                         <div class="blogs">
