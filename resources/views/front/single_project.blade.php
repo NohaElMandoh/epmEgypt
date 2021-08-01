@@ -333,6 +333,9 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
+                                                                                @php
+                                                                                  $count++;  
+                                                                                @endphp
                                                                             @endforeach
                                                                         @endif
                                                                         {{-- <div class="card">
