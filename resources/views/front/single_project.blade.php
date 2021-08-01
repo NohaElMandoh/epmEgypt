@@ -277,6 +277,9 @@
                                                             <div class="vc_column-inner-nile ">
                                                                 <div class="wpb_wrapper">
                                                                     <div class="accordion-1 nile-accordion">
+                                                                        @php
+                                                                          $count=1;  
+                                                                        @endphp
                                                                         @if ($project->plans)
                                                                             @foreach ($project->plans as $plan)
                                                                                 <div class="card">
@@ -285,9 +288,9 @@
                                                                                         <h5 class="mt-0">
                                                                                             <a class=" no_active collapsed parent"
                                                                                                 data-toggle="collapse"
-                                                                                                data-target=".collapse_41422"
+                                                                                                data-target="#collapse_4142{{$count}}"
                                                                                                 aria-expanded="false"
-                                                                                                aria-controls="collapse_41422">
+                                                                                                aria-controls="collapse_4142{{$count}}">
                                                                                                 <div class="row">
                                                                                                     <div
                                                                                                         class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -319,7 +322,7 @@
                                                                                             </a>
                                                                                         </h5>
                                                                                     </div>
-                                                                                    <div class="collapse_41422"
+                                                                                    <div id="collapse_4142{{$count}}"
                                                                                         class="collapse"
                                                                                         aria-labelledby="heading_41422"
                                                                                         data-parent=".accordion-1" style="">
@@ -330,6 +333,9 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
+                                                                                @php
+                                                                                    $count++;
+                                                                                @endphp
                                                                             @endforeach
                                                                         @endif
                                                                         {{-- <div class="card">
