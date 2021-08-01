@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="RightSideCondetnt">
                                         <div class="Giftssss">
-                                            <a href="#" class="Uncatego">{{$new->category->title}}</a>
+                                            <a href="#" class="Uncatego">{{$news->category->title}}</a>
                                             <h1 class="entry_title">{{$news->title}}</h1>
                                             <div class="liss">
                                                 <ul>
