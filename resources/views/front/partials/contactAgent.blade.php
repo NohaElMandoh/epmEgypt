@@ -59,7 +59,7 @@
                                         <div class="ProjectItem">
                                             <div class="projecttop">
                                                 <div class="images">
-                                                    <img src="{{Voyager::image($project->image)}}">
+                                                    <a href="{{route('project',$project->id)}}">   <img src="{{Voyager::image($project->image)}}"></a>
                                                 </div>
                                                 <a href="{{route('project',$project->id)}}" class="overlay">
                                                     <span class="imgegall">
@@ -115,7 +115,7 @@
                                             </div>
                                             <div class="col-lg-8 col-sm-8 col-md-8 col-xs-8">
                                                 <div class="details">
-                                                    <a href="{{route('project',$last->id)}}">{{$last->title}}</a>
+                                                    <a class="NAME" href="{{route('project',$last->id)}}">{{$last->title}}</a>
 
                                                 </div>
                                             </div>
