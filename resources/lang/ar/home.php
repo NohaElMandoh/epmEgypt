@@ -96,5 +96,6 @@ return [
     'Leave a Reply'=>'اترك تعليق',
     'Share'=>'مشاركة',
     'Print'=>'طباعة',
-    'Email'=>'البريد'
+    'Email'=>'البريد',
+    'Mosaic gallery fringilla velaliquet nec'=>'معرض الفسيفساء fringilla velaliquet غير مصنفة في موضعها'
 ];

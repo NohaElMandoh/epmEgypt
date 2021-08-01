@@ -69,19 +69,23 @@
                                                   Your browser does not support the audio element.
                                                 </audio>
                                             </div>
-                                            
+                                            @if($testimonial )
                                             <div class="Mosaic">
-                                                <h1>Mosaic gallery fringilla velaliquet nec</h1>
+                                                <h1>{{__('home.Mosaic gallery fringilla velaliquet nec')}}</h1>
                                                 <div class="MosaicPox">
                                                     <div class="iconsmos">
                                                         <i class="fas fa-quote-left"></i>
                                                     </div>
-                                                    <p>This successful response to the Clever Hands test highlights a potential for hypnosis in “treating addictions or compulsive behaviours, where people don’t feel like they’re able to inhibit very ingrained responses</p>
+                                                    @foreach ($testimonial as $test)
+                                                        
+                                                    
+                                                    <p>{{$test->comment}}</p>
                                                     <div class="line"></div>
-                                                    <h4>SAID POLITO</h4>
+                                                    <h4>{{$test->name}}</h4>
+                                                    @endforeach
                                                 </div>
                                             </div>
-                                            
+                                            @endif
                                             <div class="paragraphs">
                                                 {!!$news->stext!!}   
                                             </div>

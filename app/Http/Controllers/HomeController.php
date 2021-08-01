@@ -85,7 +85,9 @@ class HomeController extends Controller
     {
         $news = News::find($id);
         $all_news = News::latest()->take(3)->get();
-        return view('front.news_details', compact('news', 'all_news'));
+        $testimonial = Testimonial::latest()->take(1)->get();
+
+        return view('front.news_details', compact('news', 'all_news','testimonial'));
     }
     public function saveComment(Request $request)
     {

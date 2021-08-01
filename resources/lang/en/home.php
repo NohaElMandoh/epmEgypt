@@ -95,7 +95,8 @@ return [
     'Leave a Reply'=>'Leave a Reply',
     'Share'=>'Share',
     'Print'=>'Print',
-    'Email'=>'Email'
+    'Email'=>'Email',
+    'Mosaic gallery fringilla velaliquet nec'=>'Mosaic gallery fringilla velaliquet nec'
 
 
 
