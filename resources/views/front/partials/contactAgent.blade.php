@@ -140,7 +140,7 @@
                                             </div>
                                             <div class="ContentRight">
                                                 <div class="contacctform">
-                                                    <form  method="post">
+                                                    <form  method="post" id='reserve_project'>
                                                         @csrf
                                                         <div class="alert alert-success alert-success-message" style="display:none">
                                                             {{ Session::get('success') }}
@@ -301,7 +301,7 @@ $(document).on('click', '.btn_submit', function (e) {
                          
                    },
                });
-               document.getElementById("registerCourse").reset();
+               document.getElementById("reserve_project").reset();
            });
    
        </script>
