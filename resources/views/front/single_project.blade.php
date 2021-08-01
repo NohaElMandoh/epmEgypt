@@ -288,7 +288,7 @@
                                                                                         <h5 class="mt-0">
                                                                                             <a class=" no_active collapsed parent"
                                                                                                 data-toggle="collapse"
-                                                                                                data-target="#collapse_{{$count}}"
+                                                                                                data-target=".collapse_{{$count}}"
                                                                                                 aria-expanded="false"
                                                                                                 aria-controls="collapse_{{$count}}">
                                                                                                 <div class="row">
@@ -322,8 +322,8 @@
                                                                                             </a>
                                                                                         </h5>
                                                                                     </div>
-                                                                                    <div id="collapse_{{$count}}"
-                                                                                        class="collapse"
+                                                                                    <div id=""
+                                                                                        class="collapse collapse_{{$count}}"
                                                                                         aria-labelledby="heading_{{$count}}"
                                                                                         data-parent=".accordion-1" style="">
                                                                                         <div class="card-body">
