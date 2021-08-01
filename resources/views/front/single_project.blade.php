@@ -277,20 +277,20 @@
                                                             <div class="vc_column-inner-nile ">
                                                                 <div class="wpb_wrapper">
                                                                     <div class="accordion-1 nile-accordion">
-                                                                        @php
-                                                                          $count=1;  
-                                                                        @endphp
+                                                                 @php
+                                                                  $count=1;   
+                                                                 @endphp
                                                                         @if ($project->plans)
                                                                             @foreach ($project->plans as $plan)
                                                                                 <div class="card">
                                                                                     <div class="card-header"
-                                                                                        id="heading_41422">
+                                                                                        id="heading_{{$count}}">
                                                                                         <h5 class="mt-0">
                                                                                             <a class=" no_active collapsed parent"
                                                                                                 data-toggle="collapse"
-                                                                                                data-target="#collapse_4142{{$count}}"
+                                                                                                data-target="#collapse_{{$count}}"
                                                                                                 aria-expanded="false"
-                                                                                                aria-controls="collapse_4142{{$count}}">
+                                                                                                aria-controls="collapse_{{$count}}">
                                                                                                 <div class="row">
                                                                                                     <div
                                                                                                         class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -322,9 +322,9 @@
                                                                                             </a>
                                                                                         </h5>
                                                                                     </div>
-                                                                                    <div id="collapse_4142{{$count}}"
+                                                                                    <div id="collapse_{{$count}}"
                                                                                         class="collapse"
-                                                                                        aria-labelledby="heading_41422"
+                                                                                        aria-labelledby="heading_{{$count}}"
                                                                                         data-parent=".accordion-1" style="">
                                                                                         <div class="card-body">
                                                                                             <h2>{{ $plan->title }}</h2>
@@ -333,9 +333,6 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                @php
-                                                                                    $count++;
-                                                                                @endphp
                                                                             @endforeach
                                                                         @endif
                                                                         {{-- <div class="card">
