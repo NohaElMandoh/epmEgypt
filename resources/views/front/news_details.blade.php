@@ -9,7 +9,7 @@
             <ul>
                 <li> <a href="{{route('home')}}" class="linkprvpage">{{__('home.Home')}}</a> </li>
                 <li> <span>/</span> </li>
-                <li> <p>{{$new->category->title}}</p> </li>
+                <li> <p>{{$news->category->title}}</p> </li>
                 <li> <span>/</span> </li>
                 <li> <p>{{$news->title}}</p> </li>
             </ul>
