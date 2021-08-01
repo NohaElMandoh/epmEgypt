@@ -277,7 +277,7 @@ $(document).on('click', '.btn_submit', function (e) {
 
    
                $.ajax({
-                   url: "reserveProject",
+                   url: "{{ route('reserveProject') }}",
                    type: "POST",
                    data: {
                        "_token": "{{ csrf_token() }}",
