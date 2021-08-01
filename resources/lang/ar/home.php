@@ -56,8 +56,8 @@ return [
     'Previous'=>'السابق',
     'Next'=>'التالى',
     'Description'=>'الوصف',
-    'Vivamus'=>'Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-    dolor auctor.',
+    'Vivamus'=>'تعيش سهام حفرة مدخل الماكياج أو دعاية لوريت
+    دافع الألم.',
     'Property Detail'=>'تفاصيل الملكية',
     'Bedrooms'=>'غرف نوم',
     'Orienten'=>'أورينتين',
