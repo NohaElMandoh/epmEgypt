@@ -85,7 +85,7 @@
                                         @if ($project->images)
                                             @foreach ($project->images as $image)
                                                 <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                                                    class="active">
+                                                    class=" @if ($loop->first)active @endif">
                                                     <img src="{{ Voyager::image($image->image) }}">
                                                 </li>
                                             @endforeach
