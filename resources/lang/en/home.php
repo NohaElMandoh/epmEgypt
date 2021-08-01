@@ -55,8 +55,7 @@ return [
     'Previous'=>'Previous',
     'Next'=>'Next',
     'Description'=>'Description',
-    'Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-    dolor auctor.'=>'Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+    'Vivamus'=>'Vivamus sagittis lacus vel augue laoreet rutrum faucibus
     dolor auctor.',
     'Property Detail'=>'Property Detail',
     'Bedrooms'=>'Bedrooms',
@@ -93,7 +92,10 @@ return [
     'Blog categories'=>'Blog categories',
     'Archives'=>'Archives',
     'Categories'=>'Categories',
-    'Leave a Reply'=>'Leave a Reply'
+    'Leave a Reply'=>'Leave a Reply',
+    'Share'=>'Share',
+    'Print'=>'Print',
+    'Email'=>'Email'
 
 
 

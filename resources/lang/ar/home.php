@@ -56,7 +56,7 @@ return [
     'Previous'=>'السابق',
     'Next'=>'التالى',
     'Description'=>'الوصف',
-    'Vivamus sagittis lacus vel augue laoreet rutrum faucibusdolor auctor.'=>'Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+    'Vivamus'=>'Vivamus sagittis lacus vel augue laoreet rutrum faucibus
     dolor auctor.',
     'Property Detail'=>'تفاصيل الملكية',
     'Bedrooms'=>'غرف نوم',
@@ -93,5 +93,8 @@ return [
     'Blog categories'=>'التصنيفات',
     'Archives'=>'الأرشيف',
     'Categories'=>'التصنيفات',
-    'Leave a Reply'=>'اترك تعليق'
+    'Leave a Reply'=>'اترك تعليق',
+    'Share'=>'مشاركة',
+    'Print'=>'طباعة',
+    'Email'=>'البريد'
 ];

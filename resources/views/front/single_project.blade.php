@@ -22,13 +22,13 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="RightSide">
                             <ul>
-                                <li><a href="#"><i class="far fa-envelope"></i> Email</a></li>
-                                <li><a href="#"><i class="icon-printer"></i> Print</a></li>
+                                <li><a href="#"><i class="far fa-envelope"></i> {{__('home.Email')}}</a></li>
+                                <li><a href="#"><i class="icon-printer"></i> {{__('home.Print')}}</a></li>
                                 <li>
                                     <div class="dropdown">
                                         <button class=" dropdown-toggle" type="button" id="dropdownMenuButton"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="icon-share"></i> Share
+                                            <i class="icon-share"></i> {{__('home.Share')}}
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item facebook" href="#"><i
@@ -169,7 +169,7 @@
                                         <div class="Contetleft">
                                             <div class="Descrip">
                                                 <p class="titpp">
-                                                    {{ __('home.Vivamus sagittis lacus vel augue laoreet rutrum faucibusdolor auctor.') }}
+                                                    {{ __('home.Vivamus') }}
                                                 </p>
                                                 <div class="DescripProp">
                                                     <h2>{{ __('home.Property Detail') }}</h2>
