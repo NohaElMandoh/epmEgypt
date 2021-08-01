@@ -290,7 +290,7 @@
                                                                                                 data-toggle="collapse"
                                                                                                 data-target=".collapse_{{$count}}"
                                                                                                 aria-expanded="false"
-                                                                                                aria-controls="collapse_{{$count}}">
+                                                                                                aria-controls=".collapse_{{$count}}">
                                                                                                 <div class="row">
                                                                                                     <div
                                                                                                         class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
