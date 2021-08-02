@@ -40,4 +40,5 @@ Route::post('/saveComment', [App\Http\Controllers\HomeController::class, 'saveCo
 Route::post('reserveProject', [App\Http\Controllers\HomeController::class, 'reserveProject'])->name('reserveProject');
 
 
+Route::get('social-share', [SocialShareController::class, 'index']);
 });
