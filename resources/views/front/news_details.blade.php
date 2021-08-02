@@ -109,32 +109,63 @@
 
                                         </div>
                                         <div class="RightSideCondetnt">
-                                            
-                                            {!! Share::page('http://jorenvanhocht.be')->facebook()->twitter()->linkedin()->whatsapp()->telegram() !!}
+
+                                            {{-- {!! Share::page('http://jorenvanhocht.be')->facebook()->twitter()->linkedin()->whatsapp()->telegram() !!} --}}
                                             <div class="Sharelinks">
+                                                @php
+                                                    $sharelink = 'https://plus.google.com/share?url=';
+                                                    $linkedin_url = 'http://www.linkedin.com/shareArticle?mini=true&url=';
+                                                    $pin_link = 'http://pinterest.com/pin/create/button/?url=';
+                                                   $twitter_link= 'https://twitter.com/intent/tweet?text=%20Check%20up%20this%20awesome%20content';
+                                                    $fb_url='https://www.facebook.com/sharer/sharer.php?u=';
+                                                @endphp
                                                 <ul>
-                                                    <li> </li>
-                                                    {{-- <li>
-                                                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="google"><i class="fab fa-google-plus-g"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                                                </li>
-                                                
-                                                <li>
-                                                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-                                                </li>
-                                                
-                                                <li>
-                                                    <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                                                </li>
-                                                
-                                                <li>
-                                                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
-                                                </li> --}}
+
+
+
+                                               <li>
+                                                <a class="w-inline-block social-share-btn fb facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" 
+                                                target="_blank" onclick="window.open($fb_url + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f"></i> </a>
+                                                    {{-- <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a> --}}
+                                                </li> 
+                                                    <li><a class="w-inline-block social-share-btn gplus google "
+                                                            href="https://plus.google.com/share?url=" target="_blank"
+                                                            title="Share on Google+"
+                                                            onclick="window.open( $sharelink  + encodeURIComponent(document.URL)); return false;"><i
+                                                                class="fab fa-google-plus-g"></i></a> </li>
+
+                                                    <li>
+                                                        <a class="w-inline-block social-share-btn tw twitter"
+                                                            href="https://twitter.com/intent/tweet?" target="_blank"
+                                                            title="Tweet"
+                                                            onclick="window.open($twitter_link + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><i
+                                                                class="fab fa-twitter"></i></a>
+
+
+                                                        {{-- <a href="#" class="twitter"><i class="fab fa-twitter"></i></a> --}}
+                                                    </li>
+                                                    <li> <a class="w-inline-block social-share-btn lnk linkedin"
+                                                            href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source="
+                                                            target="_blank" title="Share on LinkedIn"
+                                                            onclick="window.open($linkedin_url + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i
+                                                                class="fab fa-linkedin-in"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="w-inline-block social-share-btn pin pinterest"
+                                                            href="http://pinterest.com/pin/create/button/?url=&description="
+                                                            target="_blank" title="Pin it"
+                                                            onclick="window.open($pin_link + encodeURIComponent(document.URL) + '&description=' + encodeURIComponent(document.title)); return false;"><i
+                                                                class="fab fa-pinterest-p"></i></a>
+                                                        {{-- <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a> --}}
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="w-inline-block social-share-btn email envelope"
+                                                            href="mailto:?subject=&body=:%20" target="_blank" title="Email"
+                                                            onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;"><i
+                                                                class="far fa-envelope"></i></a>
+                                                        {{-- <a href="#" class="envelope"><i class="far fa-envelope"></i></a> --}}
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -163,7 +194,8 @@
                                                                         </div>
                                                                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                                                                             <div class="ComenDetails">
-                                                                                <h1 class="name">{{ $comment->name }}</h1>
+                                                                                <h1 class="name">{{ $comment->name }}
+                                                                                </h1>
                                                                                 <a href="#"
                                                                                     class="Date">{{ $comment->created_at->format('M') }}&nbsp
                                                                                     {{ $comment->created_at->format('d') }}
@@ -204,14 +236,16 @@
                                                                 <div class="fomr-group">
                                                                     <input type="text" id='name' name='name'
                                                                         class="form-control"
-                                                                        placeholder="{{ __('home.Your name') }}" required>
+                                                                        placeholder="{{ __('home.Your name') }}"
+                                                                        required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                                                 <div class="fomr-group">
                                                                     <input type="email" id='email' name='email'
                                                                         class="form-control"
-                                                                        placeholder="{{ __('home.Your email') }}" required>
+                                                                        placeholder="{{ __('home.Your email') }}"
+                                                                        required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -235,7 +269,8 @@
                                                                             <div class="chiller_cb"> <label
                                                                                     for="myCheckbox1">{{ __('home.Save') }}</label>
                                                                                 <input id="myCheckbox1" class="myCheckbox1"
-                                                                                    type="checkbox"> <span></span></div>
+                                                                                    type="checkbox"> <span></span>
+                                                                            </div>
                                                                         </div>
 
 
@@ -244,7 +279,8 @@
                                                             </div>
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="fomr-group">
-                                                                    <button type="submit">{{ __('home.submit') }}</button>
+                                                                    <button
+                                                                        type="submit">{{ __('home.submit') }}</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -355,7 +391,8 @@
                                                                 <div class="row">
                                                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                                         <div class="images">
-                                                                            <a href="{{ route('news_details', $new->id) }}">
+                                                                            <a
+                                                                                href="{{ route('news_details', $new->id) }}">
                                                                                 <img
                                                                                     src="{{ Voyager::image($new->image) }}"></a>
                                                                         </div>
