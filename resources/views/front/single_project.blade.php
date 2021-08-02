@@ -115,17 +115,23 @@
                 <div class="panel-body">
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab1default">
-
+@php
+ $count=0;   
+@endphp
                             <div class="sliderrproduct">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
                                         @if ($project->images)
                                             @foreach ($project->images as $image)
-                                                <li data-target="#carouselExampleIndicators" data-slide-to="0"
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="{{$count}}"
                                                     class=" @if ($loop->first)active @endif">
                                                     <img src="{{ Voyager::image($image->image) }}">
                                                 </li>
+                                                @php
+                                                $count++;   
+                                               @endphp
                                             @endforeach
+        
                                         @endif
                                         {{-- <li data-target="#carouselExampleIndicators" data-slide-to="1">
                                             <img src="images/EPM_IMG/proj1.jpg">
