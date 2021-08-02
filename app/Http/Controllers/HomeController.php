@@ -44,7 +44,8 @@ class HomeController extends Controller
     public function aboutUs()
     {
         $testimonial = Testimonial::limit(2)->get();
-        return view('front.aboutUs', compact('testimonial'));
+        $projects = Project::latest()->get();
+        return view('front.aboutUs', compact('testimonial','projects'));
     }
     public function partners()
     {

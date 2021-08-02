@@ -90,10 +90,21 @@
                     </div>
                     <div class="linksliss">
                         <ul>
+                            @php
+                             $count=1;   
+
+                            @endphp
+                            @if($projects)
+                            @foreach($projects as $project)
                             <li>
-                                <a href="#" class="liks"><span><i class="fas fa-check"></i></span> 1.	BETA GREENS</a>
+                                <a href="{{route('project',$project->id)}}" class="liks"><span><i class="fas fa-check"></i></span>{{$count}}	{{$project->title}}</a>
                             </li>
-                            <li>
+                            @php
+                             $count++;   
+                            @endphp
+                            @endforeach
+                            @endif
+                            {{-- <li>
                                 <a href="#" class="liks"><span><i class="fas fa-check"></i></span> 2.	BETA RESIDENCANE</a>
                             </li>
                             <li>
@@ -110,7 +121,7 @@
                             </li>
                              <li>
                                 <a href="#" class="liks"><span><i class="fas fa-check"></i></span> 7.	Kinder Garden </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
