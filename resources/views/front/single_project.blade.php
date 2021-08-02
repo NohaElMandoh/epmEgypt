@@ -22,24 +22,61 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="RightSide">
                             <ul>
-                                <li><a href="#"><i class="far fa-envelope"></i> {{__('home.Email')}}</a></li>
-                                <li><a href="#"><i class="icon-printer"></i> {{__('home.Print')}}</a></li>
+                                <li><a href="mailto:?subject={{Request::url()}}"><i class="far fa-envelope"></i> {{__('home.Email')}}</a></li>
+                                <li><a href="#null" onClick="window.print()"><i class="icon-printer"></i> {{__('home.Print')}}</a></li>
                                 <li>
+                                    @php
+                                    $sharelink = 'https://plus.google.com/share?url=';
+                                    $linkedin_url = 'http://www.linkedin.com/shareArticle?mini=true&url=';
+                                    $pin_link = 'http://pinterest.com/pin/create/button/?url=';
+                                   $twitter_link= 'https://twitter.com/intent/tweet?text=%20Check%20up%20this%20awesome%20content';
+                                    $fb_url='https://www.facebook.com/sharer/sharer.php?u=';
+                                @endphp
                                     <div class="dropdown">
                                         <button class=" dropdown-toggle" type="button" id="dropdownMenuButton"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="icon-share"></i> {{__('home.Share')}}
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item facebook" href="#"><i
-                                                    class="fab fa-facebook-square"></i></a>
+                                            <a class="w-inline-block social-share-btn fb dropdown-item facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" 
+                                                target="_blank" onclick="window.open($fb_url + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i
+                                                class="fab fa-facebook-square"></i> </a>
+                                                  
+                                            {{-- <a class="dropdown-item facebook" href="#"><i
+                                                    class="fab fa-facebook-square"></i>
+                                                
+                                            </a> --}}
+                                            <a class="w-inline-block social-share-btn gplus google dropdown-item"
+                                                            href="https://plus.google.com/share?url=" target="_blank"
+                                                            title="Share on Google+"
+                                                            onclick="window.open( $sharelink  + encodeURIComponent(document.URL)); return false;"><i
+                                                            class="fab fa-google-plus-square"></i></a> 
+{{--                                                                 
                                             <a class="dropdown-item google" href="#"><i
-                                                    class="fab fa-google-plus-square"></i></a>
-                                            <a class="dropdown-item linkedin" href="#"><i class="fab fa-linkedin"></i></a>
-                                            <a class="dropdown-item twitter" href="#"><i
+                                                    class="fab fa-google-plus-square"></i></a> --}}
+
+                                            {{-- <a class="dropdown-item linkedin" href="#"><i class="fab fa-linkedin"></i></a> --}}
+                                            <a class="w-inline-block social-share-btn lnk linkedin dropdown-item"
+                                                            href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source="
+                                                            target="_blank" title="Share on LinkedIn"
+                                                            onclick="window.open($linkedin_url + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;">
+                                                            <i class="fab fa-linkedin"></i></a>
+
+                                            {{-- <a class="dropdown-item twitter" href="#"><i
+                                                    class="fab fa-twitter-square"></i></a> --}}
+                                                    <a class="w-inline-block social-share-btn tw twitter dropdown-item"
+                                                    href="https://twitter.com/intent/tweet?" target="_blank"
+                                                    title="Tweet"
+                                                    onclick="window.open($twitter_link + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><i
                                                     class="fab fa-twitter-square"></i></a>
-                                            <a class="dropdown-item pinterest" href="#"><i
-                                                    class="fab fa-pinterest-square"></i></a>
+
+                                            {{-- <a class="dropdown-item pinterest" href="#"><i
+                                                    class="fab fa-pinterest-square"></i></a> --}}
+                                                    <a class="w-inline-block social-share-btn pin pinterest dropdown-item"
+                                                    href="http://pinterest.com/pin/create/button/?url=&description="
+                                                    target="_blank" title="Pin it"
+                                                    onclick="window.open($pin_link + encodeURIComponent(document.URL) + '&description=' + encodeURIComponent(document.title)); return false;"><i
+                                                        class="fab fa-pinterest-square"></i></a>
                                         </div>
                                     </div>
                                 </li>
